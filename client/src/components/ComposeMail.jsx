@@ -6,7 +6,7 @@ import { API_URLS } from './services/api.urls';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom'
 
-axios.defaults.baseURL = "http://localhost:8000";
+axios.defaults.baseURL = "https://drago-pro.onrender.com";
 
 
 const dialogStyle = {
