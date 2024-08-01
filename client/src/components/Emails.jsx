@@ -19,7 +19,7 @@ function Emails() {
 
   useEffect(() => {
     getEmailsService.call({}, type);
-    console.log(getEmailsService?.response);
+    // console.log(getEmailsService?.response);
   }, [type, refereshScreen]);
 
   const selectAllEmails = (e) => {

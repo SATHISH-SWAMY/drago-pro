@@ -14,11 +14,11 @@ export const register = async (req, res) => {
   })
   console.log(user)
   if (user) {
-    return res.status(400).json({ message: 'this email id is already exist' });
+    return res.status(400).json({ message: 'This email id is already exist' });
   }
 
   if (password !== confirmPassword) {
-    return res.status(400).json({ message: 'Passwords do not match' });
+    return res.status(400).json({ message: 'Passwords not match' });
   }
 
   try {
@@ -41,7 +41,7 @@ export const register = async (req, res) => {
 // Login controller
 export const sigin = async (req, res) => {
   const { email, password } = req.body;
-console.log(req.body)
+
   try {
    const user = await User.findOne({
     email
@@ -53,6 +53,11 @@ console.log(req.body)
   if(!passwordCheck){
     return res.status(400).send({error:"invalid password"})
    }
+
+  //  if (process.env.JWT_SECRET==="") {
+    
+  //  }
+  console.log(process.env.JWT_SECRET);
    const token = jwt.sign(
     {
       userId :user._id,
