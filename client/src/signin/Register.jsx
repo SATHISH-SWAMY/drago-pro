@@ -6,7 +6,7 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import axios from 'axios';
 
-axios.defaults.baseURL = "http://localhost:8000";
+axios.defaults.baseURL = "https://drago-pro.onrender.com";
 
 
 const Register = () => {
